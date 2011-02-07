@@ -54,7 +54,8 @@
          
          @client = GStore::Client.new(
            :access_key => @google_storage_credentials['access_key_id'],
-           :secret_key => @google_storage_credentials['secret_access_key']
+           :secret_key => @google_storage_credentials['secret_access_key'],
+           :debug => true
            )
          
        end
