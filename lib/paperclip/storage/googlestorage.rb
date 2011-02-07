@@ -88,7 +88,7 @@
        @queued_for_write.each do |style, file|
          # begin
            log("saving #{path(style)}")
-           @client.put_object(@bucket, path(style), :data => file.read, :headers => {:x_goog_acl => @google_storage_permissions})
+           @client.put_object(@bucket, path(style), :data => file.read, :headers => {:content_type => instance_read(:content_type),:x_goog_acl => @google_storage_permissions})
          # rescue 
          #   raise
          # end
